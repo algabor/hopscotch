@@ -18,8 +18,8 @@
   'use strict';
 
   if (typeof define === 'function' && define.amd) {
-    // AMD. Register as an anonymous module.
-    define([], factory);
+    // Register as an AMD module.
+    define('hopscotch', [], factory);
   } else if (typeof exports === 'object') {
     // Node/CommonJS
     module.exports = factory();
