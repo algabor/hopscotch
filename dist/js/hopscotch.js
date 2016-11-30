@@ -17,21 +17,7 @@
 (function(context, factory) {
   'use strict';
 
-  if (typeof define === 'function' && define.amd) {
-    // Register as an AMD module.
-    define('hopscotch', [], factory);
-  } else if (typeof exports === 'object') {
-    // Node/CommonJS
-    module.exports = factory();
-  } else {
-    var namespace = 'hopscotch';
-    // Browser globals
-    if (context[namespace]) {
-      // Hopscotch already exists.
-      return;
-    }
-    context[namespace] = factory();
-  }
+  module.exports = factory();
 }(this, (function() {
   var Hopscotch,
       HopscotchBubble,
